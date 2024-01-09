@@ -98,6 +98,7 @@ namespace _09._OOP
 
         // <다형성 사용의미 1>
         // 새로운 클래스를 추가하거나 확장할 때 기존 코드에 영향을 최소화함
+        // 새로운 클래스를 만들 때 기존의 소스를 수정하지 않아도 됨
         class Player
         {
             Skill skill;
@@ -109,22 +110,20 @@ namespace _09._OOP
 
             public void UseSkill()
             {
-                skill.Execute();
-            }
-        }
-
-        class Heal : Skill      // 새로운 클래스를 만들 때 기존의 소스를 수정하지 않아도 됨
-        {
-            public override void Execute()
-            {
-                base.Execute();
-                Console.WriteLine("아군의 체력을 회복함");
+                skill.Execute();    // skill 클래스의 다형성을 확보한 결과 진행
             }
         }
 
 
         // <다형성 사용의미 2>
         // 클래스 간의 의존성을 줄여 확장성은 높임
-        class SkillContents : Skill { }     // 프로그램의 확장을 위해 상위클래스를 상속하는 클래스를 개발
+        class SkillContents : Skill
+        {
+            public override void Execute()
+            {
+                base.Execute();
+                // 프로그램의 확장을 위해 상위클래스를 상속하는 클래스를 개발
+            }
+        }
     }
 }

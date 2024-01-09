@@ -31,7 +31,6 @@ namespace _09._OOP
         // public    : 외부에서도 접근가능
         // private   : 내부에서만 접근가능
         // protected : 상속한 클래스에서 public, 그외에는 private
-        // internal  : 같은 어셈블리 내에서 public, 그외에는 private
         class AccessSpecifier
         {
             public int publicValue;

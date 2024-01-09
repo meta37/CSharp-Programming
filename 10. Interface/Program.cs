@@ -86,13 +86,13 @@
             Box box = new Box();
             Town town = new Town();
 
-            // player.Enter(box);			    // error : Box 는 IEnterable 인터페이스가 없음
+            // player.Enter(box);               // error : Box 는 IEnterable 인터페이스가 없음
             player.Enter(door);
             player.Enter(town);
 
             player.Open(box);
             player.Open(door);
-            // player.Open(town);		        // error : Town 는 IOpenable 인터페이스가 없음
+            // player.Open(town);               // error : Town 는 IOpenable 인터페이스가 없음
 
             IEnterable enterable;
             enterable = new Door();

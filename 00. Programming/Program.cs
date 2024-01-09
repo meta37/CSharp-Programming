@@ -42,8 +42,8 @@ namespace Programming  // 네임스페이스 안의 기능을 Programming 이름
      * 데이터와 기능으로 구성
      ************************************/
 
-    internal class Program
-	{
+    class Program
+    {
 
 
 
@@ -55,15 +55,15 @@ namespace Programming  // 네임스페이스 안의 기능을 Programming 이름
          ******************************************************/
 
         static void Main(string[] args)
-		{
+        {
             // 프로그램은 Main 함수를 시작으로 순서대로 처리됨
 
             // <표준입출력>
             // 콘솔 : 컴퓨터와 사용자가 소통하기 위한 클래스
-			// Console.WriteLine	: 콘솔에 출력하고 줄 바꿈
-			// Console.Write		: 콘솔에 출력하고 줄을 바꾸지 않음
-			// Console.ReadLine		: 콘솔을 통해 한줄 입력받음
-			// Console.ReadKey		: 콘솔을 통해 키 입력받음
+            // Console.WriteLine    : 콘솔에 출력하고 줄을 바꿈
+            // Console.Write        : 콘솔에 출력하고 줄을 바꾸지 않음
+            // Console.ReadLine     : 콘솔을 통해 한줄 입력받음
+            // Console.ReadKey      : 콘솔을 통해 한키 입력받음
 
             Console.WriteLine("Hello, World!");
 
@@ -74,6 +74,6 @@ namespace Programming  // 네임스페이스 안의 기능을 Programming 이름
             Console.Write("콘솔을 통해 키 입력 : ");
             Console.ReadKey();
             Console.WriteLine("입력이 완료되었습니다.");
-		}
-	}
+        }
+    }
 }

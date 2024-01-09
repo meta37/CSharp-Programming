@@ -177,21 +177,26 @@
         // <얕은복사, 깊은복사>
         // 얕은복사 (Shallow copy) : 객체를 복사할 때 주소값만을 복사하여 같은 원본을 가리키게 함
         // 깊은복사 (Deep copy) : 객체를 복사할 때 주소값 안의 원본을 복사하여 다른 객체를 가지고 가리키게 함
-
-        class CopyConstructor
+        void Main6()
         {
-            public RefType shallow;
-            public RefType deep;
+            RefType original = new RefType() { value = 1 };
 
-            public CopyConstructor(CopyConstructor other)
-            {
-                // 얕은복사
-                this.shallow = other.shallow;
+            // 얕은복사
+            RefType shallowCopy = original;
 
-                // 깊은복사
-                this.deep = new RefType();
-                this.deep.value = other.deep.value;
-            }
+            // 깊은복사
+            RefType deepCopy = new RefType();
+            deepCopy.value = original.value;
+
+            Console.WriteLine(original.value);      // output : 1
+            Console.WriteLine(shallowCopy.value);   // output : 1
+            Console.WriteLine(deepCopy.value);      // output : 1
+
+            original.value = 2;
+
+            Console.WriteLine(original.value);      // output : 2
+            Console.WriteLine(shallowCopy.value);   // output : 2
+            Console.WriteLine(deepCopy.value);      // output : 1
         }
 
 
